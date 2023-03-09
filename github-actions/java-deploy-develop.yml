@@ -2,7 +2,7 @@ name: Java CD with ssh
 
 on:
     push:
-        branches: ["main", "develop"]
+        branches: ["develop"]
 
 permissions:
     contents: read
@@ -21,7 +21,7 @@ jobs:
                   port: ${{ secrets.SSH_PORT }}
                   script: |
                       cd /root/github/api-server
-                      git pull origin main
+                      git pull origin develop
                       chmod +x ./gradlew
                       ./gradlew clean && ./gradlew build
                       bash /root/app/kill.sh
