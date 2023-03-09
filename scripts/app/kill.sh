@@ -1,6 +1,6 @@
 #!/bin/bash
 # 프로세스 검사
-check=$(ps -ef |grep "java -jar /root/github/api-server/build/libs/demo-0.0.1-SNAPSHOT.jar" |grep -v "grep" |wc |awk '{print $1}')
+check=$(ps -ef |grep "java -jar /root/github/api-server/build/libs/api-server-0.0.1-SNAPSHOT.jar" |grep -v "grep" |wc |awk '{print $1}')
 # ps -ef: 프로세스 검색
 # grep: 문자열 필터 - 문자열 포함하는 행
 # grep -v 문자열 필터 - 문자열 제외하는 행
@@ -10,7 +10,7 @@ check=$(ps -ef |grep "java -jar /root/github/api-server/build/libs/demo-0.0.1-SN
 if [ $check -gt 0 ] #서버가 실행중이면
 then
     echo "kill api server."
-    ps -ef |grep "java -jar /root/github/api-server/build/libs/demo-0.0.1-SNAPSHOT.jar" |grep -v "grep"|head -n 1 |awk '{print $2}' |xargs -t kill -9
+    ps -ef |grep "java -jar /root/github/api-server/build/libs/api-server-0.0.1-SNAPSHOT.jar" |grep -v "grep"|head -n 1 |awk '{print $2}' |xargs -t kill -9
 else # 서버가 실행 중이지 않으면
     echo "running api server not found. exit."
 fi
