@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "execute jar file: $SERVER_JAR_NAME"
 nohup java -jar /root/github/api-server/build/libs/$SERVER_JAR_NAME 1> nohup.out 2>&1 &
 # Github Actions에서 ssh를 통해 실행되는 nohup는
 # stdin, stdout, stderr을 actions output가 가져가서 actions가 끝나지 않기 때문에
