@@ -2,6 +2,15 @@
 
 # mysql migrate to 5.X to 8.0.32
 
+# mysql 삭제 과정
+## 참고: https://velog.io/@may54ther/구름-IDE-에서-MySQL-8-설치-삽질-끝
+sudo apt-get remove --purge mysql*
+sudo apt-get purge mysql*
+
+sudo apt-get autoremove
+sudo apt-get autoclean
+sudo apt-get remove dbconfig-mysql
+
 # mysql apt 설정
 ## 참고: https://dev.mysql.com/doc/mysql-apt-repo-quick-guide/en/
 
