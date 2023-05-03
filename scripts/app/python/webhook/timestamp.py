@@ -2,7 +2,7 @@ import requests
 import os
 from datetime import datetime
 
-discord = str(os.environ("DISCORD_WEBHOOK"))
+discord = str(os.environ.get("DISCORD_WEBHOOK"))
 
 headers = {
     'Content-Type': 'application/json'
