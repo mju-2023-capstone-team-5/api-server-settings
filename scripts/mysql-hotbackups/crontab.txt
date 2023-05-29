@@ -1,0 +1,2 @@
+0 1 * * * /root/github/api-server-settings/scripts/mysql-hotbackups/backup.sh
+0 1 * * * /root/github/api-server-settings/scripts/mysql-hotbackups/expire_backup.sh
